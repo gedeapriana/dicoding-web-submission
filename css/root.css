@@ -1,0 +1,33 @@
+:root {
+  --light-color: #fff;
+  --primary-color: #6C55E1;
+  --text-color: #1d1d1d;
+  --gray-color: #6c6c6c
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  list-style: none;
+  transition: 0.3s ease-in-out all;
+}
+a {
+  text-decoration: none;
+}
+body {
+  background-color: var(--light-color);
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+.hidden {
+  display: none;
+}
+.box-shadow {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+.bg-light {
+  background-color: var(--light-color);
+}

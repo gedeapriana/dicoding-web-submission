@@ -1,0 +1,121 @@
+#about {
+  width: 100%;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#about-wrapper {
+  width: 60%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 0.7fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "image desc" "image school";
+  margin: 100px 0;
+}
+#about-image {
+  grid-area: image;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+#about-image img {
+  width: 100%;
+  max-width: 300px;
+  object-fit: contain;
+  z-index: 1;
+  border-radius: 20px;
+}
+
+#about-image img::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 100px;
+  left: 100px;
+  background-color: var(--light-color);
+}
+
+#about-desc {
+  grid-area: desc;
+}
+#about-desc p {
+  color: var(--light-color);
+  line-height: 24px;
+}
+#about-desc #about-desc-header {
+  font-size: 1.4rem;
+  color: var(--light-color);
+  margin: 20px 0;
+}
+#about-school {
+  grid-area: school;
+}
+#about-school #about-school-header {
+  font-size: 1.4rem;
+  color: var(--light-color);
+  margin: 20px 0;
+}
+#about-school #about-school-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+#about-school #about-school-content > * {
+  background-color: var(--light-color);
+  border-radius: 15px;
+  overflow: hidden;
+}
+#about-school #about-school-content > * .school-image {
+  width: 100%;
+}
+#about-school #about-school-content > * .school-image img {
+  width: 100%;
+  object-fit: cover;
+}
+#about-school #about-school-content > * .school-desc {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: start;
+  padding: 10px;
+}
+#about-school #about-school-content > * .school-desc h1 {
+  color: var(--primary-color);
+}
+#about-school #about-school-content > * .school-desc h4 {
+  font-size: .7rem;
+  color: var(--gray-color);
+  margin: 5px 0;
+}
+#about-school #about-school-content > * .school-desc footer {
+  display: flex;
+  margin: 20px 0 0 auto;
+  gap: 3px;
+}
+#about-school #about-school-content > * .school-desc footer > span {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  padding: 5px 8px ;
+  display: block;
+  border-radius: 999em;
+  font-size: .5rem;
+  margin-left: auto;
+}
+@media (max-width: 768px) {
+  #about-wrapper {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1371px) {
+  #about-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 'image' 'desc' 'school';
+  }
+}
